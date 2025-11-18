@@ -1,16 +1,3 @@
-The error `  : was unexpected at this time. ` happens because the previous Batch file used **parentheses `()`** to group commands (e.g., `( echo code ) > file.py`). In Batch scripts, if your Python code contains a `)` (like in `print("Hello")`), the computer thinks the command block has ended early, runs into the next symbol (often a `:` in Python), and crashes.
-
-I have rewritten the script using the **"Safe Append" method**. This creates the files line-by-line, which guarantees it will not crash regardless of the special characters inside.
-
-### 📝 Instructions
-
-1.  Create a file named **`Run_Crypto.bat`**.
-2.  **Paste** the code below.
-3.  **Double-click** to run.
-
-<!-- end list -->
-
-```batch
 @echo off
 setlocal enabledelayedexpansion
 
